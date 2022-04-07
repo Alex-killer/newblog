@@ -15,7 +15,7 @@
 </head>
 <body>
 <header>
-    @include('blog.includes.navbar')
+    @include('blog.admin.includes.navbar')
 
     @yield('content')
 

@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::paginate(9);
+        $posts = Post::published()->paginate(10);
         return view('blog.posts.index', compact('posts'));
     }
 

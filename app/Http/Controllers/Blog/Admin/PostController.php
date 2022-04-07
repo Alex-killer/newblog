@@ -11,11 +11,16 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::paginate(10);
-        return view('blog.posts.index', compact('posts'));
+        return view('blog.admin.posts.index', compact('posts'));
     }
 
     public function show(Post $post)
     {
-        return view('blog.posts.show', compact('post'));
+        return view('blog.admin.posts.show', compact('post'));
+    }
+
+    public function create()
+    {
+        return view('blog.admin.posts.create');
     }
 }
